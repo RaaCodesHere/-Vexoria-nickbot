@@ -1,0 +1,7 @@
+[phases.setup]
+nixPkgs = ["openjdk17"]
+
+[phases.build]
+
+[start]
+cmd = "java -jar RankedBot.jar"
