@@ -1,1 +1,1 @@
-worker: java -jar RankedBot.jar
+worker: cd /app && java -jar RankedBot.jar
