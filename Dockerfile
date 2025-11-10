@@ -2,14 +2,19 @@ FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-# Copy the JAR file and config directory
+# Copy files
 COPY RankedBot.jar .
 COPY RankedBot/ RankedBot/
 COPY data.db .
-COPY start-bot.sh .
 
-# Make script executable
-RUN chmod +x start-bot.sh
+# Set env var
+ARG DISCORD_TOKEN
+ENV DISCORD_TOKEN=${DISCORD_TOKEN}
 
-# Run the bot via script
-CMD ["./start-bot.sh"]
+# Replace placeholder at build time
+RUN if [ ! -z "$DISCORD_TOKEN" ]; then \
+    sed -i "s/\\\${DISCORD_TOKEN}/${DISCORD_TOKEN}/g" /app/RankedBot/config.yml; \
+    fi
+
+# Start bot
+CMD ["java", "-jar", "RankedBot.jar"]
