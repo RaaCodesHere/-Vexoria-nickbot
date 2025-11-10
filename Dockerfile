@@ -6,6 +6,10 @@ WORKDIR /app
 COPY RankedBot.jar .
 COPY RankedBot/ RankedBot/
 COPY data.db .
+COPY start-bot.sh .
 
-# Run the bot
-CMD ["java", "-jar", "RankedBot.jar"]
+# Make script executable
+RUN chmod +x start-bot.sh
+
+# Run the bot via script
+CMD ["./start-bot.sh"]
