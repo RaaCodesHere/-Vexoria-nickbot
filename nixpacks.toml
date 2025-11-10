@@ -6,4 +6,4 @@ nixPkgs = ["openjdk17"]
 [phases.build]
 
 [start]
-cmd = "cd /app && java -jar RankedBot.jar"
+cmd = "java -jar RankedBot.jar"
