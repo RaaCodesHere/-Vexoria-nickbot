@@ -51,7 +51,7 @@ log-commands: true
 banned-role: 1437354161019551825
 
 # Channel where the bans are announced, leave blank to disable announcing bans
-ban-channel: 1437353055606673448
+ban-channel: 1437485650176901140
 
 # Ban time for strikes (in hours)
 strike-1: 0
