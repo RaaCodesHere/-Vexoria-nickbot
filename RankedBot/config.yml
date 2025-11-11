@@ -102,7 +102,7 @@ scored-announcing: 1437365100867489913
 party-invite-cmd: "/p invite"
 
 # Game channel deleting time after its scored (in seconds)
-game-deleting-time: 60
+game-deleting-time: 15
 
 # How many screenshots do players have to attach when using =submit (for proof)
 submitting-attachments: 1
@@ -113,7 +113,7 @@ scorer-role: 1437354186135306281
 #============================== LEVELS
 
 # set to "false" to disable levels completely
-levels-enabled: true
+levels-enabled: false
 
 # xp for winning a game
 win-xp: 50
